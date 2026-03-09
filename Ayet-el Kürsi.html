@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Ayet-el Kürsi</title>
+<style>
+body{
+  background:#fff8dc; /* açık altın zemin */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial, sans-serif;
+  margin:0;
+}
+
+.dua-box{
+  max-width:600px;
+  padding:30px;
+  border-radius:20px;
+  background:#fffbe0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align:center;
+  color:#000;
+  font-size:20px;
+  line-height:1.5;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px rgba(0,0,0,0.3); }
+  to { box-shadow: 0 0 30px rgba(255,0,0,0.5); }
+}
+
+</style>
+</head>
+<body>
+
+<div class="dua-box">
+<p>
+<b>Ayet-el Kürsi</b><br><br>
+"Allâhü lâ ilâhe illâ hüvel hayyül kayyûm, lâ te'huzühu sinetün velâ nevm, lehu mâ fissemâvâti ve ma fil'ard, men zellezi yeşfeu indehu illâ bi'iznih, ya'lemü mâ beyne eydiyhim vemâ halfehüm, velâ yü-hîtûne bi'şey'in min ilmihî illâ bima şâe vesia kürsiyyühüssemâvâti vel'ard, velâ yeûdühû hıfzuhümâ ve hüvel aliyyül azim."
+</p>
+</div>
+
+<!-- Otomatik çalan ses -->
+<audio id="duaAudio" src="ayet-el-kursi.mp3" autoplay></audio>
+
+<script>
+// Bazı tarayıcılarda autoplay engellenebilir, kullanıcı dokununca çalsın
+document.addEventListener('click', () => {
+    const audio = document.getElementById('duaAudio');
+    if(audio.paused) audio.play();
+});
+</script>
+
+</body>
+</html>
