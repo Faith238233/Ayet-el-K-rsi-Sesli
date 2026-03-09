@@ -5,7 +5,7 @@
 <title>Ayet-el Kürsi</title>
 <style>
 body{
-  background:#fff8dc; /* açık altın zemin */
+  background:#fff8dc;
   display:flex;
   flex-direction: column;
   justify-content:center;
@@ -37,6 +37,11 @@ button{
   margin-top:20px;
   padding:10px 20px;
   font-size:16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #d9534f;
+  color: white;
 }
 </style>
 </head>
@@ -56,7 +61,7 @@ button{
 <button onclick="document.getElementById('duaAudio').play()">Dua’yı Dinle</button>
 
 <script>
-// Bazı tarayıcılarda autoplay engellenebilir, kullanıcı dokununca çalsın
+// Tarayıcı autoplay engellerse kullanıcı tıklayınca çalacak
 document.addEventListener('click', () => {
     const audio = document.getElementById('duaAudio');
     if(audio.paused) audio.play();
