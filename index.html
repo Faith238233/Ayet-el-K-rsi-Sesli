@@ -7,6 +7,7 @@
 body{
   background:#fff8dc; /* açık altın zemin */
   display:flex;
+  flex-direction: column;
   justify-content:center;
   align-items:center;
   height:100vh;
@@ -32,6 +33,11 @@ body{
   to { box-shadow: 0 0 30px rgba(255,0,0,0.5); }
 }
 
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  font-size:16px;
+}
 </style>
 </head>
 <body>
@@ -45,6 +51,9 @@ body{
 
 <!-- Otomatik çalan ses -->
 <audio id="duaAudio" src="ayet-el-kursi.mp3" autoplay></audio>
+
+<!-- Kullanıcı tıklayınca çalacak buton -->
+<button onclick="document.getElementById('duaAudio').play()">Dua’yı Dinle</button>
 
 <script>
 // Bazı tarayıcılarda autoplay engellenebilir, kullanıcı dokununca çalsın
