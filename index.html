@@ -54,14 +54,14 @@ button{
 </p>
 </div>
 
-<!-- Otomatik çalan ses -->
-<audio id="duaAudio" src="ayet-el-kursi.mp3" autoplay></audio>
+<!-- MP3 raw GitHub linki -->
+<audio id="duaAudio" src="https://github.com/faith238233/Ayet-el-K-rsi-Sesli/raw/main/ayet-el-kursi.mp3" autoplay></audio>
 
 <!-- Kullanıcı tıklayınca çalacak buton -->
 <button onclick="document.getElementById('duaAudio').play()">Dua’yı Dinle</button>
 
 <script>
-// Tarayıcı autoplay engellerse kullanıcı tıklayınca çalacak
+// Tarayıcı autoplay engellerse, kullanıcı tıklayınca ses çalacak
 document.addEventListener('click', () => {
     const audio = document.getElementById('duaAudio');
     if(audio.paused) audio.play();
