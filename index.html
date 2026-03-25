@@ -43,6 +43,20 @@ button{
   background-color: #d9534f;
   color: white;
 }
+
+#videoBox{
+  margin-top:20px;
+  display:none;
+  width:90%;
+  max-width:500px;
+}
+
+iframe{
+  width:100%;
+  height:280px;
+  border-radius:15px;
+  border:none;
+}
 </style>
 </head>
 <body>
@@ -54,18 +68,21 @@ button{
 </p>
 </div>
 
-<!-- MP3 raw GitHub linki -->
-<audio id="duaAudio" src="https://github.com/faith238233/Ayet-el-K-rsi-Sesli/raw/main/ayetel-kursi-nasser-al-qatami.mp3" autoplay></audio>
+<button onclick="playVideo()">Dua’yı Dinle</button>
 
-<!-- Kullanıcı tıklayınca çalacak buton -->
-<button onclick="document.getElementById('duaAudio').play()">Dua’yı Dinle</button>
+<div id="videoBox">
+<iframe id="ytVideo"
+src=""
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
+</div>
 
 <script>
-// Tarayıcı autoplay engellerse, kullanıcı tıklayınca ses çalacak
-document.addEventListener('click', () => {
-    const audio = document.getElementById('duaAudio');
-    if(audio.paused) audio.play();
-});
+function playVideo(){
+  document.getElementById("videoBox").style.display = "block";
+  document.getElementById("ytVideo").src = "https://youtu.be/g4YGw6n4rpQ?si=QEc1EDkT86UfiHpJ";
+}
 </script>
 
 </body>
